@@ -8,12 +8,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class WebController {
 
     @GetMapping("/webshop")
-    public String helloWorld(){
-        return "helloworld";
-    }
-
-    @GetMapping("/home")
-    public String websiteHome(){
-        return "header";
+    public String check(){
+        return "general";
     }
 }

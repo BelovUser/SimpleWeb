@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" th:href="@{/headerStyle.css}" />
+    <link rel="stylesheet" th:href="@{/tableStyle.css}" />
+
+
 </head>
 <body>
-
+    <header th:replace="header.html :: headerFragment"></header>
+    <table th:replace="table.html :: tableFragment"></table>
 </body>
 </html>

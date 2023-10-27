@@ -1,17 +1,14 @@
 body {
     font-family: Helvetica;
     background-color: rgba(45, 45, 45, 0.423);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     margin: 0;
 }
 
 table {
     border-radius: 5px;
-    overflow: hidden;
-    width: 700px;
+    width: 100%;
+    max-width: 900px;
+    margin: 2rem auto;
 }
 
 table, th, td {
@@ -28,7 +25,7 @@ td {
 th {
     border: 1px solid rgb(65, 65, 65);
     color: gainsboro;
-    font-size: 3rem;
+    font-size: 1.5rem;
     font-weight: bolder;
     background-color: rgb(33, 33, 33);
 }
