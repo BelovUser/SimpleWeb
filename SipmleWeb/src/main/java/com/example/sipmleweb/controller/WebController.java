@@ -32,6 +32,17 @@ public class WebController {
     @GetMapping("/only-available")
     public String onlyAvailable(Model model){
         model.addAttribute("storage",  storage.availableItem());
-    return "onlyavailable";
+    return "general";
+    }
+
+    @GetMapping("/cheapest-first")
+    public String cheapestFirst(Model model){
+        return "general";
+    }
+
+    @GetMapping("/average-stock")
+    public String average(Model model){
+        model.addAttribute("average",  storage.getAverage());
+        return "general";
     }
 }

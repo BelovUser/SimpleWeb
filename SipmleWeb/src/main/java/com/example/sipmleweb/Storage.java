@@ -24,4 +24,11 @@ public class Storage {
                 .filter(item -> item.getQuantityOfStock() != 0 )
                 .collect(Collectors.toList());
     }
+
+    public double getAverage() {
+        return this.storage.stream()
+                .mapToDouble(ShopItem::getPrice)
+                .average()
+                .orElse(0.0);
+    }
 }
