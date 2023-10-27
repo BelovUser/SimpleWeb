@@ -13,17 +13,11 @@
         <th>price</th>
         <th>quantity of stock</th>
     </tr>
-    <tr>
-        <td>January</td>
-        <td>50,000.00</td>
-        <td>January</td>
-        <td>50,000.00</td>
-    </tr>
-    <tr>
-        <td>January</td>
-        <td>50,000.00</td>
-        <td>January</td>
-        <td>50,000.00</td>
+    <tr th:each="shopitem : ${storage}">
+        <td th:text="${shopitem.name}"></td>
+        <td th:text="${shopitem.description}"></td>
+        <td th:text="${shopitem.price}"></td>
+        <td th:text="${shopitem.quantityOfStock}"></td>
     </tr>
 
 </table>
