@@ -5,7 +5,8 @@ import com.example.sipmleweb.Storage;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.util.List;
 
 @Controller
 public class WebController {
@@ -23,13 +24,14 @@ public class WebController {
 
 
     @GetMapping("/webshop")
-    public String homeView() {
+    public String homeView(Model model) {
+        model.addAttribute("storage",  storage.getStorage());
         return "general";
     }
 
-    @GetMapping("/table")
-    public String addToList(Model model) {
-        model.addAttribute("storage",  storage.getStorage());
-        return "table";
+    @GetMapping("/only-available")
+    public String onlyAvailable(Model model){
+        model.addAttribute("storage",  storage.availableItem());
+    return "onlyavailable";
     }
 }

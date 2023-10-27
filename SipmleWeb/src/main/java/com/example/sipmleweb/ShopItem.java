@@ -2,15 +2,13 @@ package com.example.sipmleweb;
 
 public class ShopItem {
     private String name;
-
     private String description;
-
-    private int price;
+    private double price;
     private int quantityOfStock;
 
 
 
-    public ShopItem(String name, String description, int price, int quantityOfStock) {
+    public ShopItem(String name, String description, double price, int quantityOfStock) {
         this.name = name;
         this.description = description;
         this.price = price;
@@ -25,11 +23,15 @@ public class ShopItem {
         return description;
     }
 
-    public int getPrice() {
+    public double getPrice() {
         return price;
     }
 
     public int getQuantityOfStock() {
         return quantityOfStock;
+    }
+
+    public String getFormatedPrice() {
+        return  String.format("%.1f", this.price) + " Kč";
     }
 }

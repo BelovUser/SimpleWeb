@@ -4,6 +4,7 @@ import com.example.sipmleweb.ShopItem;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Storage {
 
@@ -15,5 +16,12 @@ public class Storage {
 
     public void addToStorage(ShopItem shopItem) {
         storage.add(shopItem);
+    }
+
+
+    public List<ShopItem> availableItem() {
+         return this.storage.stream()
+                .filter(item -> item.getQuantityOfStock() != 0 )
+                .collect(Collectors.toList());
     }
 }

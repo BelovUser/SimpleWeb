@@ -16,7 +16,7 @@
     <tr th:each="shopitem : ${storage}">
         <td th:text="${shopitem.name}"></td>
         <td th:text="${shopitem.description}"></td>
-        <td th:text="${shopitem.price}"></td>
+        <td th:text="${shopitem.getFormatedPrice()}"></td>
         <td th:text="${shopitem.quantityOfStock}"></td>
     </tr>
 
