@@ -2,56 +2,18 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Header</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            background: rgba(45, 45, 45, 0.423);
-            font-family: Helvetica;
-        }
-
-        header {
-            background-color: whitesmoke;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        h1 {
-            color: rgba(0, 0, 0, 0.864);
-            font-weight: bolder;
-            font-size: 2.8rem;
-        }
-
-        nav {
-            margin: 10px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: rgba(112, 112, 112, 0.704);
-            margin: 10px;
-            font-size: 1rem;
-        }
-
-        nav a:hover {
-            color: rgba(73, 73, 73, 0.914);
-        }
-    </style>
+    <link rel="stylesheet" th:href="@{/headerStyle.css}" />
 </head>
 <body>
 <header>
-    <h1>website header</h1>
+    <h1>shop</h1>
     <nav>
-        <a href="/home">Home</a>
-        <a href="/about">About</a>
-        <a href="/services">Services</a>
-        <a href="/contact">Contact</a>
+        <a href="/home">only avaiblable</a>
+        <a href="/about">cheapest first</a>
+        <a href="/services">contains nike</a>
+        <a href="/contact">average stock</a>
+        <a href="/contact">most expensive</a>
     </nav>
 </header>
 </body>
