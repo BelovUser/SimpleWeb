@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" th:href="@{/searchbarStyle.css}"/>
     <link rel="stylesheet" th:href="@{/headerStyle.css}" />
     <link rel="stylesheet" th:href="@{/modulStyle.css}" />
 </head>
 <body>
 <header th:replace="header.html :: headerFragment"></header>
+<label th:replace="searchbar.html :: searchBarFragment"></label>
 <div th:replace="modul.html :: modulFragment"></div>
 </body>
 </html>

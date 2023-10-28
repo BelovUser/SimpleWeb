@@ -1,22 +1,20 @@
 * {
     box-sizing: border-box;
 }
-
 div {
     min-height: 100vh;
-    display: flex;
     justify-content: center;
     align-items: center;
     color: grey;
-    font-family: Helvetica;
     font-weight: bolder;
-    margin: 0;
+    margin-top: 50px;
+    margin-left: 46.5%;
 }
 .average{
     text-align: center;
     color: whitesmoke;
     padding: 20px;
-    width: 420px;
+    width: 130px;
     background: rgb(33, 33, 33);
-    border-radius: 2px;
+    border-radius: 20px;
 }

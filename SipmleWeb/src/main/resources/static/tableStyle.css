@@ -1,11 +1,4 @@
-body {
-    font-family: Helvetica;
-    background-color: rgba(45, 45, 45, 0.423);
-    margin: 0;
-}
-
 table {
-    border-radius: 10px;
     width: 100%;
     max-width: 900px;
     margin: 2rem auto;
