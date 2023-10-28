@@ -43,6 +43,6 @@ public class WebController {
     @GetMapping("/average-stock")
     public String average(Model model){
         model.addAttribute("average",  storage.getAverage());
-        return "general";
+        return "average";
     }
 }

@@ -27,7 +27,7 @@ public class Storage {
 
     public double getAverage() {
         return this.storage.stream()
-                .mapToDouble(ShopItem::getPrice)
+                .mapToDouble(ShopItem::getQuantityOfStock)
                 .average()
                 .orElse(0.0);
     }
