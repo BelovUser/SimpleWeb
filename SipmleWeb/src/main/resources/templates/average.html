@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/headerStyle.css}" />
+    <link rel="stylesheet" th:href="@{/modulStyle.css}" />
 </head>
 <body>
-$END$
+<header th:replace="header.html :: headerFragment"></header>
+<div th:replace="modul.html :: modulFragment"></div>
 </body>
 </html>

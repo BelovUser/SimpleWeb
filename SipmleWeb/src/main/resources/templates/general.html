@@ -11,11 +11,5 @@
 <body>
     <header th:replace="header.html :: headerFragment"></header>
     <table th:replace="table.html :: tableFragment"></table>
-    <th:block th:with="currentPath=${#httpServletRequest.getRequestURI()}">
-        <div th:switch="${currentPath}">
-            <p th:case="/cheapest-first">Este es el contenido para la ruta 1.</p>
-            <p th:case="/average-stock">Este es el contenido para la ruta 2.</p>
-        </div>
-    </th:block>
 </body>
 </html>
