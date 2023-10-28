@@ -34,7 +34,7 @@ public class Storage {
 
     public List<ShopItem> filterByName(String name){
         return this.storage.stream()
-                .filter(item -> item.getName()git .equalsIgnoreCase(name))
+                .filter(item -> item.getName().equalsIgnoreCase(name))
                 .collect(Collectors.toList());
     }
 }
