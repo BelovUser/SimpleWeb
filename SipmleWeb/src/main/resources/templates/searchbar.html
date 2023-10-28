@@ -5,11 +5,11 @@
   <link rel="stylesheet" th:href="@{/searchbarStyle.css}"/>
 </head>
 <body class="searchbody">
-<form action="" method="GET">
+<form method="post">
   <div>
-    <label class="search" th:fragment="searchBarFragment">
-      <input type="text" name="seachBar" placeholder="what are you looking for?">
-    </label>
+    <form class="search" th:action="@{/webshop/search-item}" th:fragment="searchBarFragment" method="POST">
+      <input type="text" name="item" placeholder="what are you looking for?">
+    </form>
   </div>
 </form>
 </body>

@@ -4,7 +4,7 @@ import com.example.sipmleweb.ShopItem;
 import com.example.sipmleweb.Storage;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -44,5 +44,11 @@ public class WebController {
     public String average(Model model){
         model.addAttribute("average",  storage.getAverage());
         return "average";
+    }
+
+    @PostMapping("/webshop/search-item")
+    public String search(@RequestParam String item, Model model){
+        model.addAttribute("storage",storage.filterByName(item));
+        return "general";
     }
 }

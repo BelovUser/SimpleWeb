@@ -31,4 +31,10 @@ public class Storage {
                 .average()
                 .orElse(0.0);
     }
+
+    public List<ShopItem> filterByName(String name){
+        return this.storage.stream()
+                .filter(item -> item.getName().equalsIgnoreCase(name))
+                .collect(Collectors.toList());
+    }
 }
