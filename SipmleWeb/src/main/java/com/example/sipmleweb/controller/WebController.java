@@ -6,8 +6,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
 @Controller
 public class WebController {
 
@@ -49,6 +47,12 @@ public class WebController {
     @PostMapping("/webshop/search-item")
     public String search(@RequestParam String item, Model model){
         model.addAttribute("storage",storage.filterByName(item));
+        return "general";
+    }
+
+    @GetMapping("/contains")
+    public String contains(Model model){
+        model.addAttribute("storage",storage.containsItem("Nike"));
         return "general";
     }
 }

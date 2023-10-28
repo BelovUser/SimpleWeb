@@ -1,7 +1,5 @@
 package com.example.sipmleweb;
 
-import com.example.sipmleweb.ShopItem;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -35,6 +33,12 @@ public class Storage {
     public List<ShopItem> filterByName(String name){
         return this.storage.stream()
                 .filter(item -> item.getName().equalsIgnoreCase(name))
+                .collect(Collectors.toList());
+    }
+
+    public List<ShopItem> containsItem(String name){
+        return this.storage.stream()
+                .filter(item -> item.getName().equalsIgnoreCase(name) || item.getDescription().contains(name))
                 .collect(Collectors.toList());
     }
 }
