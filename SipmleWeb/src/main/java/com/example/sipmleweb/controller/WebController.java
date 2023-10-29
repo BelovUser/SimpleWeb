@@ -55,4 +55,13 @@ public class WebController {
         model.addAttribute("storage",storage.containsItem("Nike"));
         return "general";
     }
+
+    @GetMapping("/sign-in")
+    public String signIn(){
+        return "login";
+    }
+    @GetMapping("/sign-up")
+    public String signUp(){
+        return "sign-up";
+    }
 }

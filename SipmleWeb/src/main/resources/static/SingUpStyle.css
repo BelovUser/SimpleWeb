@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: Helvetica;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(45, 45, 45, 0.423);
+}
+
+form {
+    padding: 20px;
+    width: 420px;
+    background: whitesmoke;
+    border-radius: 5px;
+    margin: auto 0;
+    text-align: center;
+}
+
+input {
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: 0;
+    outline: none;
+}
+
+input:focus {
+    color: white;
+    background-color: rgba(45, 45, 45, 0.359);
+}
+
+div {
+    margin: 13px;
+    font-size: 1.3rem;
+    color: grey;
+}
+
+h1 {
+    margin: 20px;
+    color:rgba(0, 0, 0, 0.864);
+    font-weight: bold;
+    font-size: 2.8rem;
+    text-align: center;
+}
+a{
+    color: rgba(112, 112, 112, 0.704);
+    font-size: 0.9rem;
+}
+a:hover{
+    color: rgba(73, 73, 73, 0.914);
+}
+#buttonSign{
+    margin: auto 0;
+    padding: 15px;
+    border-radius: 20px;
+    width: 45%;
+    background-color: rgba(0, 0, 0, 0.864);
+    color: white;
+    border: none;
+    font-weight: bolder;
+    text-align: center;
+}
+
+#buttonSign:hover {
+    background-color: rgb(143, 143, 143);
+    color:  rgba(0, 0, 0, 0.864);
+}
