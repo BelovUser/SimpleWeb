@@ -12,56 +12,58 @@ public class WebController {
     private final Storage storage = new Storage();
 
     public WebController() {
-        storage.addToStorage(new ShopItem("Running shoes", "Nike running shoes for every day sport" , 1000,5));
-        storage.addToStorage(new ShopItem("Printer", "some HP printer that will print pages" , 3000,2));
-        storage.addToStorage(new ShopItem("Coca cola", "0.5l standard coke" , 25,0));
-        storage.addToStorage(new ShopItem("Wokin", "Chiken with fried rice and Wokin sauce" , 119,100));
-        storage.addToStorage(new ShopItem("T-shirt", "Blue with a corgi on a bike" , 300,1));
+        storage.addToStorage(new ShopItem("Running shoes", "Nike running shoes for every day sport", 1000, 5));
+        storage.addToStorage(new ShopItem("Printer", "some HP printer that will print pages", 3000, 2));
+        storage.addToStorage(new ShopItem("Coca cola", "0.5l standard coke", 25, 0));
+        storage.addToStorage(new ShopItem("Wokin", "Chiken with fried rice and Wokin sauce", 119, 100));
+        storage.addToStorage(new ShopItem("T-shirt", "Blue with a corgi on a bike", 300, 1));
 
     }
 
 
     @GetMapping("/webshop")
     public String homeView(Model model) {
-        model.addAttribute("storage",  storage.getStorage());
+        model.addAttribute("storage", storage.getStorage());
         return "general";
     }
 
     @GetMapping("/only-available")
-    public String onlyAvailable(Model model){
-        model.addAttribute("storage",  storage.availableItem());
-    return "general";
+    public String onlyAvailable(Model model) {
+        model.addAttribute("storage", storage.availableItem());
+        return "general";
     }
 
     @GetMapping("/cheapest-first")
-    public String cheapestFirst(Model model){
+    public String cheapestFirst(Model model) {
+        model.addAttribute("storage", storage.sortByPrice());
         return "general";
     }
 
     @GetMapping("/average-stock")
-    public String average(Model model){
-        model.addAttribute("average",  storage.getAverage());
+    public String average(Model model) {
+        model.addAttribute("average", storage.getAverage());
         return "average";
     }
 
     @PostMapping("/webshop/search-item")
-    public String search(@RequestParam String item, Model model){
-        model.addAttribute("storage",storage.filterByName(item));
+    public String search(@RequestParam String item, Model model) {
+        model.addAttribute("storage", storage.filterByName(item));
         return "general";
     }
 
     @GetMapping("/contains")
-    public String contains(Model model){
-        model.addAttribute("storage",storage.containsItem("Nike"));
+    public String contains(Model model) {
+        model.addAttribute("storage", storage.containsItem("Nike"));
         return "general";
     }
 
     @GetMapping("/sign-in")
-    public String signIn(){
+    public String signIn() {
         return "login";
     }
+
     @GetMapping("/sign-up")
-    public String signUp(){
+    public String signUp() {
         return "sign-up";
     }
 }

@@ -1,6 +1,7 @@
 package com.example.sipmleweb;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -18,8 +19,8 @@ public class Storage {
 
 
     public List<ShopItem> availableItem() {
-         return this.storage.stream()
-                .filter(item -> item.getQuantityOfStock() != 0 )
+        return this.storage.stream()
+                .filter(item -> item.getQuantityOfStock() != 0)
                 .collect(Collectors.toList());
     }
 
@@ -30,15 +31,21 @@ public class Storage {
                 .orElse(0.0);
     }
 
-    public List<ShopItem> filterByName(String name){
+    public List<ShopItem> filterByName(String name) {
         return this.storage.stream()
                 .filter(item -> item.getName().equalsIgnoreCase(name))
                 .collect(Collectors.toList());
     }
 
-    public List<ShopItem> containsItem(String name){
+    public List<ShopItem> containsItem(String name) {
         return this.storage.stream()
                 .filter(item -> item.getName().equalsIgnoreCase(name) || item.getDescription().contains(name))
+                .collect(Collectors.toList());
+    }
+
+    public List<ShopItem> sortByPrice() {
+        return this.storage.stream()
+                .sorted(Comparator.comparingDouble(item -> item.getPrice()))
                 .collect(Collectors.toList());
     }
 }
