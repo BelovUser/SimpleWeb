@@ -1,12 +1,14 @@
 * {
     box-sizing: border-box;
 }
+
 body {
     font-family: Helvetica;
     min-height: 100vh;
+    display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(45, 45, 45, 0.423);
+    background-color: rgba(255, 174, 0, 0.52);
 }
 
 form {
@@ -23,19 +25,12 @@ button {
     background-color: rgba(0, 0, 0, 0.864);
     color: white;
     border: none;
-}
-
-div.button, h1 {
-    text-align: center;
-}
-
-button{
     font-weight: bolder;
 }
 
 button:hover {
     background-color: rgb(143, 143, 143);
-    color:  rgba(0, 0, 0, 0.864);
+    color: rgba(0, 0, 0, 0.864);
 }
 
 input {
@@ -60,14 +55,16 @@ div {
 
 h1 {
     margin: 20px;
-    color:rgba(0, 0, 0, 0.864);
+    color: rgba(0, 0, 0, 0.864);
     font-weight: bold;
     font-size: 2.8rem;
 }
-a{
+
+a {
     color: rgba(112, 112, 112, 0.704);
     font-size: 0.9rem;
 }
-a:hover{
+
+a:hover {
     color: rgba(73, 73, 73, 0.914);
 }

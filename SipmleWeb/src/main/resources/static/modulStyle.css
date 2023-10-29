@@ -2,19 +2,19 @@
     box-sizing: border-box;
 }
 div {
-    min-height: 100vh;
+    display: flex;
     justify-content: center;
     align-items: center;
     color: grey;
     font-weight: bolder;
     margin-top: 50px;
-    margin-left: 46.5%;
 }
 .average{
     text-align: center;
     color: whitesmoke;
-    padding: 20px;
-    width: 130px;
+    padding: 35px;
+    max-width: 400px;
+    align-items: center;
     background: rgb(33, 33, 33);
     border-radius: 20px;
 }
