@@ -66,4 +66,10 @@ public class WebController {
     public String signUp() {
         return "sign-up";
     }
+
+    @GetMapping("/most-expensive")
+    public String mostExpensive(Model model) {
+        model.addAttribute("average", storage.getMostExpensive());
+        return "average";
+    }
 }

@@ -48,4 +48,11 @@ public class Storage {
                 .sorted(Comparator.comparingDouble(item -> item.getPrice()))
                 .collect(Collectors.toList());
     }
+
+    public String getMostExpensive() {
+        return this.storage.stream()
+                .max(Comparator.comparingDouble(ShopItem::getPrice))
+                .map(ShopItem::getName)
+                .get();
+    }
 }
