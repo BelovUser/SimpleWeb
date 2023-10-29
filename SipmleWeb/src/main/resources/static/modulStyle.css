@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
 }
-div {
+.module{
     display: flex;
     justify-content: center;
     align-items: center;
